@@ -1,0 +1,316 @@
+/* Base Styles */
+/* 基础样式 */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+body.working {
+    background-color: #fff5f5; /* Working mode background color */
+                              /* 工作模式背景色 */
+}
+
+body.break {
+    background-color: #f0f8ff; /* Break mode background color */
+                             /* 休息模式背景色 */
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+/* Pomodoro Timer Styles */
+/* 番茄钟计时器样式 */
+.pomodoro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6c63ff 0%, #8a85ff 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
+}
+
+.timer-display {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer-controls, .sound-control {
+    margin: 10px 0;
+}
+
+.btn-control {
+    background-color: white;
+    color: #6c63ff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-control:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-control:active {
+    transform: translateY(1px);
+}
+
+/* Task Management Styles */
+/* 任务管理样式 */
+.tasks {
+    margin-bottom: 40px;
+}
+
+.task-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-inputs input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-inputs input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+#addTaskBtn {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #5a52e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+#taskList li:hover {
+    background-color: #f1f3f5;
+    transform: translateX(2px);
+}
+
+#taskList li.completed {
+    background-color: #e9ecef;
+    border-left-color: #28a745; /* Green for completed tasks */
+                              /* 已完成任务的绿色标记 */
+}
+
+#taskList li.completed .task-title {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+#taskList li.active-task {
+    border-left-color: #6c63ff; /* Purple for active task */
+                             /* 活跃任务的紫色标记 */
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(108, 99, 255, 0.1);
+}
+
+.task-title {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.task-duration {
+    color: #6c757d;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.task-actual-time {
+    color: #6c757d;
+    font-size: 14px;
+    margin-right: auto;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-complete, .btn-start {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-complete {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.btn-complete:hover {
+    background-color: #e9ecef;
+}
+
+.btn-complete:active {
+    background-color: #dee2e6;
+}
+
+.btn-start {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.btn-start:hover {
+    background-color: #5a52e0;
+}
+
+.btn-start:active {
+    background-color: #483d8b;
+}
+
+/* Music Management Styles */
+/* 音乐管理样式 */
+.music-controls {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+#currentMusicName {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+#musicUpload {
+    display: none;
+}
+
+.music-upload-label {
+    background-color: #6c63ff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.music-upload-label:hover {
+    background-color: #5a52e0;
+}
+
+#musicList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#musicList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+#musicList li.active {
+    border-color: #6c63ff;
+    background-color: #f8f9fa;
+}
+
+#musicList li span {
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#musicList li button {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+#musicList li button:hover {
+    color: #6c63ff;
+}
+
+/* Statistics Panel Styles */
+/* 统计面板样式 */
+.stats {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    height: 300px;
+}    
